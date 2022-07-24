@@ -4,6 +4,7 @@ let token = localStorage.getItem("token");
 
 if (!token) {
   location.replace("login.html");
+  location.reload()
 }
 
 setTimeout(() => {
