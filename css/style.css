@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,200&display=swap");
 
 *,
@@ -86,23 +93,38 @@ img {
 .loader {
   width: 100%;
   height: 100vh;
-  background: #000046; 
-  background: -webkit-linear-gradient(to bottom, #1CB5E0, #000046);  
+  background: #000046;  
+  background: -webkit-gradient(linear, left top, left bottom, from(#1CB5E0), to(#000046));  
+  background: -o-linear-gradient(top, #1CB5E0, #000046);  
   background: linear-gradient(to bottom, #1CB5E0, #000046); 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   z-index: 1;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .ring {
   width: 60px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -114,12 +136,21 @@ img {
   border-radius: 50%;
   border: 5px solid rgb(252, 252, 252);
   border-top-color: transparent;
-  animation: rotate 1.3s linear infinite;
+  -webkit-animation: rotate 1.3s linear infinite;
+          animation: rotate 1.3s linear infinite;
+}
+
+@-webkit-keyframes rotate { 
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate { 
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -488,7 +519,8 @@ img {
   content: "";
   position: absolute;
   border-bottom: 20px solid rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -40px 36px -28px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px -40px 36px -28px inset;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px -40px 36px -28px inset;
   border-right: 20px solid transparent;
   border-left: 20px solid transparent;
   left: -20px;
